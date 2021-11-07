@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".Home"
+    >
 
     <Button
         android:drawableLeft="@drawable/ic_search"
@@ -19,42 +20,94 @@
         android:gravity="left|center_vertical"
         android:textColor="@color/grey_2"
         android:textSize="12dp"
-        android:text="Cari di Chilli"
+        android:text="Cari Minuman favoritmu"
         android:textAllCaps="false"
         android:backgroundTint="@color/grey">
     </Button>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PROMO"
-        android:textColor="@color/orange"
-        android:gravity="center">
-    </TextView>
-    <View
-        android:layout_width="200dp"
-        android:layout_height="3dp"
-        android:layout_gravity="center"
-        android:background="@color/orange"
-        >
-
-    </View>
-    <com.synnapps.carouselview.CarouselView
-        android:id="@+id/carouselView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="5dp"
-        app:fillColor="#FFFFFFFF"
-        app:pageColor="#00000000"
-        app:radius="6dp"
-        app:slideInterval="3000"
-        app:strokeColor="#FF777777"
-        app:strokeWidth="1dp"/>
-
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PROMO"
+                android:textColor="@color/orange"
+                android:gravity="center">
+            </TextView>
+            <View
+                android:layout_width="200dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center"
+                android:background="@color/orange"
+                >
 
+            </View>
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="5dp"
+                app:fillColor="#FFFFFFFF"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:slideInterval="3000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp"/>
+            <!--    <TextView-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:text="Category"-->
+            <!--        android:textColor="@color/white">-->
+            <!--    </TextView>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menu Terlaris"
+                android:textColor="@color/orange"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp">
+
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_terlaris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <!--    <LinearLayout-->
+            <!--        android:id="@+id/populer_list"-->
+            <!--        android:orientation="horizontal"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content">-->
+            <!--    </LinearLayout>-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:background="@color/grey"
+                >
+            </View>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diskon"
+                android:textColor="@color/orange"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp">
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_promo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -4,8 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android_Project/ecommerce/app/src/main/res/drawable/ic_search.xml" value="0.240625" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/drawable/populer_card.xml" value="0.11510416666666666" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/drawable/rounded_img.xml" value="0.23692307692307693" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/drawable/rounded_textview.xml" value="0.23692307692307693" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/drawable/strike.xml" value="0.23692307692307693" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/drawable/tes.xml" value="0.11145833333333334" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/activity_espresso_detail.xml" value="0.22" />
         <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/activity_main.xml" value="0.10916919959473151" />
-        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/home_activity.xml" value="0.25" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/category_card.xml" value="0.19021739130434784" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/category_textview.xml" value="0.33" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/home_activity.xml" value="0.22" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/kuy_drink.xml" value="0.1933876811594203" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/populer_card.xml" value="0.5" />
+        <entry key="..\:/Android_Project/ecommerce/app/src/main/res/layout/product_card.xml" value="0.33" />
       </map>
     </option>
   </component>
