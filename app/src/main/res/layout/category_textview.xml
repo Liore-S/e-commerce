@@ -3,9 +3,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_textview"
-    android:text="Kopi"
-    android:textStyle="bold"
     android:padding="10dp"
     android:paddingStart="25dp"
-    android:paddingEnd="25dp">
-</TextView>
+    android:paddingEnd="25dp"
+    android:text="Kopi"
+    android:textStyle="bold"/>

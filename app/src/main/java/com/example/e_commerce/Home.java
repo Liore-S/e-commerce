@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.e_commerce.adapters.ProductAdapter;
@@ -21,6 +24,7 @@ public class Home extends AppCompatActivity {
 
     RecyclerView recyTerlaris;
     RecyclerView recyPromo;
+    ImageButton ib;
 
 
     @Override
@@ -34,8 +38,8 @@ public class Home extends AppCompatActivity {
 
         ArrayList<Product> allPrducts = Database.getProducts();
         ArrayList<Product> promoProducts = new ArrayList<>();
-        for (Product product: allPrducts){
-            if (product.diskon > 0 ){
+        for (Product product : allPrducts) {
+            if (product.diskon > 0) {
                 promoProducts.add(product);
             }
         }
@@ -43,14 +47,20 @@ public class Home extends AppCompatActivity {
         this.recyTerlaris = findViewById(R.id.recy_terlaris);
         ProductAdapter productAdapter = new ProductAdapter(this, allPrducts);
         this.recyTerlaris.setAdapter(productAdapter);
-        this.recyTerlaris.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
+        this.recyTerlaris.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         this.recyTerlaris.setHasFixedSize(true);
 
         this.recyPromo = findViewById(R.id.recy_promo);
         ProductAdapter promoAdapter = new ProductAdapter(this, promoProducts);
         this.recyPromo.setAdapter(promoAdapter);
-        this.recyPromo.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
+        this.recyPromo.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         this.recyPromo.setHasFixedSize(true);
+
+        ImageButton ib = (ImageButton) findViewById(R.id.btn_cart);
+        ib.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Cart.class);
+            this.startActivity(intent);
+        });
     }
 
     ImageListener imageListener = new ImageListener() {

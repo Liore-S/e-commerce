@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,83 +7,129 @@
     android:orientation="vertical"
     tools:context=".EspressoDetail">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/back">
-
-        </ImageView>
-
-        <TextView
-            android:id="@+id/detail_nama"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:text="Espresso"
-            android:textColor="@color/black"
-            android:textSize="30sp">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal">
 
-        </TextView>
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/detail_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="Espresso"
+                android:textColor="@color/black"
+                android:textSize="30sp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/detail_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/espresso" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/rounded_textview"
+                    android:backgroundTint="@color/grey"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="18dp"
+                        android:text="Deskripsi"
+                        android:textColor="@color/orange" />
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="left"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/orange" />
+
+                    <TextView
+                        android:id="@+id/detail_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="25dp"
+                        android:paddingBottom="25dp"
+                        android:text=""
+                        android:textColor="@color/grey_2"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/detail_img"
-            android:layout_width="match_parent"
-            android:layout_height="238dp"
-            android:src="@drawable/espresso"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="50dp">
-        </ImageView>
-        <LinearLayout
+        android:layout_alignParentBottom="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/to_cart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_textview"
-            android:backgroundTint="@color/grey"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/orange"
+            app:cardCornerRadius="13dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/orange"
-                android:text="Deskripsi"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="18dp">
-            </TextView>
-            <View
-                android:layout_width="60dp"
-                android:layout_height="2dp"
-                android:layout_marginStart="25dp"
-                android:layout_gravity="left"
-                android:background="@color/orange">
-            </View>
-            <TextView
-                android:id="@+id/detail_desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/grey_2"
-                android:textSize="15sp"
-                android:paddingBottom="25dp"
-                android:text="">
-
-            </TextView>
-        </LinearLayout>
+                android:layout_gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="Add To Cart"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

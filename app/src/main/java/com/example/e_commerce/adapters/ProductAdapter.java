@@ -56,7 +56,7 @@ public class ProductAdapter extends
 
         holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(context, EspressoDetail.class);
-            intent.putExtra("relocate",product);
+            intent.putExtra("relocate", product);
             context.startActivity(intent);
         });
     }
